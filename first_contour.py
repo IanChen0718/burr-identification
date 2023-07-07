@@ -27,12 +27,12 @@ if __name__=='__main__':
     p3 = [767.27, -147.03, 256.96]
 
     #-----------------------target-----------------------#
-    target = o3d.io.read_point_cloud("./Hanger/PCD/pcd2xyz_Hanger_block_1000000.pcd")
+    target = o3d.io.read_point_cloud("./Workpieces/PCD/target.pcd")
     #-----------------------source-----------------------#
-    source = o3d.io.read_point_cloud("./Hanger/PCD/Hanger_0310_4_0.05.pcd") 
+    source = o3d.io.read_point_cloud("./Workpieces/PCD/first_source.pcd") 
 
  
-    source_orig_pd = pd.DataFrame(source.points, columns =["X", "Y", "Z"])
+    source_orig_pd = pd.DataFrame(np.asarray(source.points), columns =["X", "Y", "Z"])
 #%%
     # threshold = 0.00002
     trans_init = np.asarray([[0.0, 1.0, 0.0, 656.5], [-1.0, 0.0, 0.0, -113],
@@ -54,11 +54,11 @@ if __name__=='__main__':
                                             std_ratio=3.0)
     """Voxel Downsampling"""
     uni_down_cl = cl.uniform_down_sample(every_k_points=10)
-    uni_down_cl_pd = pd.DataFrame(uni_down_cl.points, columns =["X", "Y", "Z"])
+    uni_down_cl_pd = pd.DataFrame(np.asarray(uni_down_cl.points), columns =["X", "Y", "Z"])
     # o3d.visualization.draw_geometries([uni_down_cl])
     
     uni_down_target = target.uniform_down_sample(every_k_points=3)
-    uni_down_target_pd = pd.DataFrame(uni_down_target.points, columns =["X", "Y", "Z"])
+    uni_down_target_pd = pd.DataFrame(np.asarray(uni_down_target.points), columns =["X", "Y", "Z"])
     # o3d.visualization.draw_geometries([uni_down_target])      
 
 #%%
@@ -78,10 +78,12 @@ if __name__=='__main__':
     # target.estimate_normals(
     #     o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=5000)) 
     uni_down_cl.estimate_normals(
-        o3d.geometry.KDTreeSearchParamHybrid(radius=100, max_nn=5000))
+        #o3d.geometry.KDTreeSearchParamHybrid(radius=100, max_nn=5000))
+        o3d.geometry.KDTreeSearchParamHybrid(radius=0.01, max_nn=500))
     
     target.estimate_normals(
-        o3d.geometry.KDTreeSearchParamHybrid(radius=100, max_nn=5000)) 
+        #o3d.geometry.KDTreeSearchParamHybrid(radius=100, max_nn=5000)) 
+        o3d.geometry.KDTreeSearchParamHybrid(radius=0.01, max_nn=500)) 
     
     reg_p2l = o3d.pipelines.registration.registration_icp(
         uni_down_cl, target, threshold, trans_init2,
@@ -104,10 +106,10 @@ if __name__=='__main__':
     source = cl.transform(reg_p2p.transformation) 
     draw_registration_result(source, target)
 #%%
-    source_pd = pd.DataFrame(source.points, columns =["X", "Y", "Z"])
+    source_pd = pd.DataFrame(np.asarray(source.points), columns =["X", "Y", "Z"])
     source_pd.insert(0, "Color", "Source")
 
-    target_pd = pd.DataFrame(target.points, columns =["X", "Y", "Z"])
+    target_pd = pd.DataFrame(np.asarray(target.points), columns =["X", "Y", "Z"])
     target_pd.insert(0, "Color", "Target")
 #%%
     """Outlier"""
@@ -161,7 +163,7 @@ if __name__=='__main__':
 
     row_lables = source_pd_trim.index.values
     source2 = source2.transform(reg_p2p2.transformation)
-    source_pd_trim = pd.DataFrame(source2.points, columns =["X", "Y", "Z"])
+    source_pd_trim = pd.DataFrame(np.asarray(source2.points), columns =["X", "Y", "Z"])
     source_pd_trim.index = row_lables
     draw_pd_result(source_pd_trim, target_pd_trim)
 #%%
@@ -307,7 +309,7 @@ if __name__=='__main__':
     all_points = source_proj_r.append(target_corr_trim[["U", "V", "Color"]], ignore_index = True)   
     fig = px.scatter(all_points[["U", "V", "Color"]], x = "U", y = "V", color='Color',
                       color_discrete_sequence=["blue", "red", "green"])    
-    fig.write_html('Hanger.html', auto_open=True)  
+    fig.write_html('Workpieces.html', auto_open=True)  
 
     """matplot """
     # fig, ax = plt.subplots()

@@ -8,12 +8,12 @@ Created on Thu Mar  3 16:37:36 2022
 from .GetPlaneEq import GetPlaneEq 
 import numpy as np
 
-def Project(Hanger_np, p1, p2, p3):
+def Project(workpiece_np, p1, p2, p3):
     gpe = GetPlaneEq(p1, p2, p3)
     a1, b1, c1, d1 = gpe.GetPara()  
     n1 = np.asarray([a1, b1, c1, d1])
     pt_proj = []
-    for element in Hanger_np:
+    for element in workpiece_np:
         element_proj = Projection(element, n1)
         pt_proj.append(element_proj)
     pt_proj = np.asarray(pt_proj)

@@ -24,9 +24,9 @@ if __name__=='__main__':
     p3 = [663.75, -147.03, 279.01]
    
     #-----------------------target-----------------------#
-    target = o3d.io.read_point_cloud('./Hanger/PCD/pcd2xyz_Hanger_block_1000000.pcd')
+    target = o3d.io.read_point_cloud('./Workpieces/PCD/target.pcd')
     # #-----------------------source-----------------------#
-    source = o3d.io.read_point_cloud('./Hanger/PCD/Hanger_side_0321_0.05.pcd')  
+    source = o3d.io.read_point_cloud('./Workpieces/PCD/second_source.pcd')  
     source_orig_pd = pd.DataFrame(np.asarray(source.points), columns =["X", "Y", "Z"])
     # threshold = 0.00002
     trans_init = np.asarray([[1.0, 0.0, 0.0, 662.6], [0.0, 1.0, 0.0, -171],
@@ -387,12 +387,4 @@ if __name__=='__main__':
     fig.write_html('Burr Inspection.html', auto_open=True) 
 
     size_indeces_inspect = source_proj_r2[source_proj_r2["Color"]=="Source"].index.values
-
-    """Plot burrs on object"""
-    hanger = o3d.io.read_point_cloud('./Hanger/PCD/2464M34P01_0413_10000.pcd')
-    hanger_pd = pd.DataFrame(np.asarray(hanger.points), columns =["X", "Y", "Z"])
-    # burr_pd = source_proj_r2[source_proj_r2["Color"] == "Burr"]
-    burr_pd = source_proj_r2[source_proj_r2["Color"] == ">=0.2mm"]
-    burr_index = burr_pd.index.values
-    burr_origin = source_corr_trim.loc[burr_index, ["X", "Y", "Z"]]
-    draw_outlier_result(hanger_pd, burr_origin)
+    
