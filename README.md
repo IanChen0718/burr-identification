@@ -7,7 +7,9 @@ Nowadays, manual inspection of cutting part burrs is a time-consuming process. F
 In contrast to previous studies that primarily focused on defect positions and classifications in two-dimensional space, this research proposes a novel computational intelligence algorithm to address the identification of burrs in three-dimensional space, particularly on irregularly shaped surfaces.The findings of this study indicate that the proposed method can be utilized to determine the sizes and relative positions of the burrs, thereby guiding the robotic manipulator to execute different processing strategies more effectively.
 
 
+## Getting Started 
 
+- [second_contour.ipynb](https://github.com/IanChen0718/burr-identification/second_contour.ipynb)
 
 
 
