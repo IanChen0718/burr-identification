@@ -9,7 +9,8 @@ In contrast to previous studies that primarily focused on defect positions and c
 
 ## Getting Started 
 
-- [second_contour.ipynb](https://github.com/IanChen0718/burr-identification/second_contour.ipynb)
+- [second_contour.ipynb](https://github.com/IanChen0718/burr-identification/blob/main/second_contour.ipynb)
+
 
 
 
