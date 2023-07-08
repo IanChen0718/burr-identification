@@ -15,7 +15,7 @@ In contrast to previous studies that primarily focused on defect positions and c
 
 ## Local Area Attention
 
-First of all, the plane where the burrs are located, also known as the processing plane, is referred to as the **hyperplane**. To optimize the analysis, the hyperplane is utilized to extract the area of the workpiece surface.
+First of all, the plane where the burrs are located, also known as the processing plane, is referred to as the **_hyperplane_**. To optimize the analysis, the hyperplane is utilized to extract the area of the workpiece surface.
 
 ## Contour Extraction
 
