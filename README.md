@@ -11,6 +11,12 @@ In contrast to previous studies that primarily focused on defect positions and c
 
 - [second_contour.ipynb](https://github.com/IanChen0718/burr-identification/blob/main/second_contour.ipynb). This notebook presents the step-by-step process of burr identification.
 
+- There are two irregular contours for identification purposes, respectively [first_contour.py](https://github.com/IanChen0718/burr-identification/blob/main/first_contour.py) and [second_contour.py](https://github.com/IanChen0718/burr-identification/blob/main/second_contour.py).
+
+
+
+
+
 
 
 
