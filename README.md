@@ -13,7 +13,15 @@ In contrast to previous studies that primarily focused on defect positions and c
 
 - There are two irregular contours for identification purposes, respectively [first_contour.py](https://github.com/IanChen0718/burr-identification/blob/main/first_contour.py) and [second_contour.py](https://github.com/IanChen0718/burr-identification/blob/main/second_contour.py).
 
+## Local Area Attention
 
+First of all, the plane where the burrs are located, also known as the processing plane, is referred to as the hyperplane. To optimize the analysis, the hyperplane is utilized to extract the are of the workpiece surface.
+
+## Contour Extraction
+
+Contour extraction in a point cloud often involves evaluating the degree of planarity, which is a commonly employed method. However, it is worth noting that there are contours that do not contain any burrs.
+
+To address this issue, the hyperplane and Gaussian Mixture Model \(GMM\) are introduced as a means to remove such contours.
 
 
 
