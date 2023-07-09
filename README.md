@@ -26,8 +26,15 @@ To address this issue, the hyperplane and Gaussian Mixture Model \(GMM\) are int
 ![GMM](/images/gmm.png)
 
 ## Feature Extraction
+### Dimension reduction with hyperplane
+The process of feature extraction involves the planar projection of the point cloud using a hyperplane. This projection allows the contours in the three-dimensional space to be represented using new two-dimensional coordinates.
 
 ## Burr Identification 
+### Segmentation wih contours
+
+A novel algorithm has been developed to differentiate whether the point cloud represents a burr or not. In this algorithm, the contour of the target point cloud is considered as a one-dimensional manifold embedded in a two-dimensional space. Consequently, the linear segmentation can be achieved by unfolding the contour of the target point cloud.
+
+
 
 
 
