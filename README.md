@@ -49,10 +49,10 @@ $$\Phi = distance \left( t_j^{i}, s_{i} \right) \cdot f^{'} \left( t_j^{i} \righ
 
 $$ argmin \left( \Phi \left( t_j^{i} \right) \right), ~ subject ~ to \left \| f^{'}\left( t_j^{i}\right) \right \| = 1 $$
 
-where the source $S = \\{ s_i \mid 1 \leq i \leq m \\}$, the target $T^{i} = \\{ t_j^{i} \mid 1 \leq j \leq k \\}$ in the neighbourhood of $s_i$
+where the source $S = \\{ s_i \mid 1 \leq i \leq m \\}$, the target $T^{i} = \\{ t_j^{i} \mid 1 \leq j \leq k \\}$ in the neighbourhood of $s_i$.
 
 <p align="center">
-  <img src="/images/cost_function.png">
+  <img width="418" height="225" src="/images/cost_function.png">
 </p>
 
 
