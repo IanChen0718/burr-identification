@@ -23,7 +23,9 @@ Contour extraction in a point cloud often involves evaluating the degree of plan
 
 To address this issue, the hyperplane and Gaussian Mixture Model \(GMM\) are introduced as a means to remove such contours.
 
-![GMM](/images/gmm.png)
+<p align="center">
+  <img src="/images/gmm.png">
+</p>
 
 ## Feature Extraction
 ### Dimension reduction with hyperplane
@@ -34,7 +36,9 @@ The process of feature extraction involves the planar projection of the point cl
 
 A novel algorithm has been developed to differentiate whether the point cloud represents a burr or not. In this algorithm, the contour of the target point cloud is considered as a one-dimensional manifold embedded in a two-dimensional space. Consequently, the linear segmentation can be achieved by unfolding the contour of the target point cloud.
 
-![Segmentation](/images/segmentation.png)
+<p align="center">
+  <img src="/images/segmentation.png">
+</p>
 
 ## Burr Size Measurement
 
