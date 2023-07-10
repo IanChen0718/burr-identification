@@ -47,6 +47,10 @@ $$ argmin \left( \Phi \left( t_j^{i} \right) \right), ~ subject ~ to \left \| f^
 
 where the source $S = \\{ s_i \mid 1 \leq i \leq m \\}$, the target $T^{i} = \\{ t_j^{i} \mid 1 \leq j \leq k \\}$ in the neighbourhood of $s_i$
 
+![Cost function](/images/cost_function.png)
+
+
+
 
 
 
