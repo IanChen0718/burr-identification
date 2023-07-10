@@ -40,7 +40,7 @@ A novel algorithm has been developed to differentiate whether the point cloud re
 
 The burr size is defined as the vertical distance between the source and the target. However, since the function of the target is unknown, the vertical distance cannot be directly obtained. Therefore, a cost function has been developed to calculate the burr size. 
 
-$$\Phi = distance\left( t_j^i s_i\right) \cdot f^' \left( t_j^i \right)$$
+$$\Phi &= distance \left( t_j^i s_i \right) \cdot f^' \left( t_j^i \right)$$
 
 
 
