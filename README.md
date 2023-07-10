@@ -45,7 +45,7 @@ $$\Phi = distance \left( t_j^{i}, s_{i} \right) \cdot f^{'} \left( t_j^{i} \righ
 
 $$ argmin \left( \Phi \left( t_j^{i} \right) \right), ~ subject ~ to \left \| f^{'}\left( t_j^{i}\right) \right \| = 1 $$
 
-where source $S = \{ s_i \mid 1 \leq i \leq m \}$
+where source $S = \\{ s_i \mid 1 \leq i \leq m \\}$
 
 
 
