@@ -35,7 +35,7 @@ The process of feature extraction involves the planar projection of the point cl
 ## Burr Identification 
 ### Segmentation wih contours
 
-A novel algorithm has been developed to differentiate whether the point cloud represents a burr or not. In this algorithm, the contour of the target is considered as a **_one-dimensional manifold＿** embedded in a two-dimensional space. Consequently, **_the linear segmentation can be achieved by unfolding the contour of the target＿**.
+A novel algorithm has been developed to differentiate whether the point cloud represents a burr or not. In this algorithm, the contour of the target is considered as a **_one-dimensional manifold_** embedded in a two-dimensional space. Consequently, **_the linear segmentation can be achieved by unfolding the contour of the target_**.
 
 <p align="center">
   <img width="583.2" height="629.6" src="/images/segmentation.png">
