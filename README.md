@@ -43,7 +43,7 @@ The burr size is defined as the vertical distance between the source and the tar
 **Cost function**
 $$\Phi = distance \left( t_j^{i}, s_{i} \right) \cdot f^{'} \left( t_j^{i} \right)$$
 
-$$ argmin \left( \Phi \left( t_j^{i} \right) \right), subjec;to \left \| f^{'}\left( t_j^{i}\right) \right \| = 1 $$
+$$ argmin \left( \Phi \left( t_j^{i} \right) \right), subject \; to \left \| f^{'}\left( t_j^{i}\right) \right \| = 1 $$
 
 
 
