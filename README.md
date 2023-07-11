@@ -25,7 +25,7 @@ Contour extraction in a point cloud often involves evaluating the degree of plan
 To address this issue, the hyperplane and Gaussian Mixture Model \(GMM\) are introduced as a means to remove such contours.
 
 <p align="center">
-  <img src="/images/gmm.png">
+  <img width="583.2" src="/images/gmm.png">
 </p>
 
 ## Feature Extraction
