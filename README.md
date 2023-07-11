@@ -56,6 +56,10 @@ where the source $S = \\{ s_i \mid 1 \leq i \leq m \\}$, the target $T^{i} = \\{
   <img width="418" height="225" src="/images/cost_function.png">
 </p>
 
+<p align="center">
+  <img src="/images/result.png">
+</p>
+
 
 
 
